@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'dummy.html' %}
+ 
+
+{% block title %}
+    <title>Registration_page</title>
+{% endblock %} 
+
+{% block body_block %}
     <center>
+        <h1>Register here</h1>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
@@ -16,5 +17,6 @@
             <input type="submit" value="register">
         </form>
     </center>
+{% endblock %}
 </body>
 </html>
